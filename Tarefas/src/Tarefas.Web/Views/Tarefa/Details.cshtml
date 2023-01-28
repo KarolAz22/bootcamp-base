@@ -1,23 +1,22 @@
-@model Tarefas.Web.Models.Tarefa
+@model Tarefas.Web.Models.TarefaViewModel
 
 <form asp-action="Create">
 
    <div class="form-group">
         <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
-        <!--@Html.TextBoxFor(model => model.Titulo, new { @class = "form-control", @readonly = "true" })-->
         <input asp-for="Titulo" class="form-control" disabled/>
     </div>
 
     <div class="form-group">
         <label asp-for="Descricao">@Html.DisplayNameFor(model => model.Descricao)</label>
-        <!--@Html.TextAreaFor(model => model.Descricao, new { @class = "form-control", @readonly = "true" })-->
         <input asp-for="Descricao" class="form-control" disabled/>
     </div>
-    <input asp-for="Id" hidden/>
-    <input asp-for="Concluida" hidden/>
         
     <input type="submit" class="btn btn-primary" />
 
     <td><a asp-controller="Tarefa" asp-action="Index" asp-route-id="@Model.Id">Voltar</a></td>
-        
+    
+    <input asp-for="Id" hidden />
+    <input asp-for="Concluida" hidden />
+    
 </form>

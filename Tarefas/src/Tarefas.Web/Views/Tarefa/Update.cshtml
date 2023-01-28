@@ -1,9 +1,9 @@
-@model Tarefas.Web.Models.Tarefa
+@model Tarefas.Web.Models.TarefaViewModel
 
 <form asp-action="Update">
 
-    <input asp-for="Id" hidden/>
-    <input asp-for="Concluida" hidden/>
+    <input asp-for="Id" hidden />
+    <input asp-for="Concluida" hidden />
 
     <div class="form-group">
         <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
@@ -16,5 +16,5 @@
     </div>
         
     <input type="submit" class="btn btn-primary" value="Criar" />
-        
+
 </form>

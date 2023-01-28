@@ -1,7 +1,10 @@
-@model Tarefas.Web.Models.Tarefa
+@model Tarefas.Web.Models.TarefaViewModel
 
 <form asp-action="Create">
 
+    @Html.ValidationSummary()
+
+    
     <div class="form-group">
         <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
         @Html.TextBoxFor(model => model.Titulo, new { @class = "form-control" })
